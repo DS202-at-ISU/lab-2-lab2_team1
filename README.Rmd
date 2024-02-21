@@ -68,9 +68,28 @@ amesDF <- data.frame(ames)
         16. Neighborhood, what neighborhood its in, Factor with 42 options
 
     ```{r}
-ggplot(ames, aes(x = log10(`Sale Price`), na.rm=TRUE)) +
-    geom_histogram()
-    
+    ## Q2: We are trying to find relationship between diffirent variables and sale price.
 
-print(max(amesDF$Sale.Price, na.rm=TRUE)-min(amesDF$Sale.Price, na.rm=TRUE))
+    ## Question 3
+    ## The range of the sales price is bwtween 0 and 20500000 dollars.
+    ggplot(ames, aes(x = log10(`Sale Price`), na.rm=TRUE)) +
+    geom_histogram()
+
+    print(max(amesDF$Sale.Price, na.rm=TRUE)-min(amesDF$Sale.Price, na.rm=TRUE))
     ```
+
+Q4:
+
+-   Chen's section:
+
+    ```{r}
+    library(dplyr)
+    # Finding info of yearbuilt
+    years_built <- select(amesDF, YearBuilt) 
+    summary(years_built)
+
+    # plot scatter plot with year built and sale price, colored by fireplace.
+    ggplot(amesDF, aes(x = YearBuilt, y = log10(`Sale.Price`), na.rm=TRUE, color = FirePlace)) + geom_point() + xlim(1900, 2022)
+    ```
+
+    As you can see the relationship between Year Built and price is very stable. I separated the data by fire place. The houses that has fireplace tends to have higher sales prices. But there are some outliers even if the house has fireplaces the sale prices is very low, and some houses that does not have fireplaces have higher sale prices.
