@@ -66,10 +66,8 @@ dim(ames)
 
         16. Neighborhood, what neighborhood its in, Factor with 42 options
 
-    ```{r}
-
-
-    ```
+2.  We are focusing on the the relationship between others variables and the sales Price.
+3.  
 
 # Gavin's Section
 
