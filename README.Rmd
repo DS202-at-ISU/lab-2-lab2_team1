@@ -25,6 +25,7 @@ data("ames")
 str(ames)
 summary(ames)
 dim(ames)
+amesDF <- data.frame(ames)
 
 ```
 
@@ -66,11 +67,10 @@ dim(ames)
 
         16. Neighborhood, what neighborhood its in, Factor with 42 options
 
-2.  We are focusing on the the relationship between others variables and the sales Price.
-3.  
+    ```{r}
+ggplot(ames, aes(x = log10(`Sale Price`), na.rm=TRUE)) +
+    geom_histogram()
+    
 
-# Gavin's Section
-
-# Luis's Section
-
-# Chen's Section
+print(max(amesDF$Sale.Price, na.rm=TRUE)-min(amesDF$Sale.Price, na.rm=TRUE))
+    ```
