@@ -23,5 +23,34 @@ library(classdata)
 ## import Ames Data
 data("ames")
 str(ames)
+summary(ames)
+dim(ames)
 
 ```
+
+1.  Inspect the first few lines of the data set:
+
+-   what variables are there? of what type are the variables? what does each variable mean? what do we expect their data range to be?
+
+    -   There are 16 variables in this data sets
+
+        1.  Parcel ID, character, character with ID. It doesn't have the range.
+
+        2.  Address, character, property address in Ames, IA. It doesn't have the range.
+
+        3.  Style, factor variable, factor variable detailing the type of housing. It doesn't have the range.
+
+        4.  Occupancy, factor variable, factor variable of type of housing. It doesn't have the range.
+
+        5.  Sale Date, date, date of sale. Range: 2017-07-03 - 2022-08-31.
+
+        6.  Sale Price, number, sales price (in US dollar), Range: 0 \$ - 20500000\$
+
+        7.  Multi Sale, logical value: was this sale part of a package. It doesn't have the range.
+
+        8.  YearBuilt, Integer, year in which the house was built. Range: 0 - 2022.
+
+    ```{r}
+
+
+    ```
