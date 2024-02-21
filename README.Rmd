@@ -50,6 +50,22 @@ dim(ames)
 
         8.  YearBuilt, Integer, year in which the house was built. Range: 0 - 2022.
 
+        9.  Acres, integer, amount of acres of land. Range: 0-13
+
+        10. Total living area, Sqf of living area. Range 0-6007
+
+        11. Bedrooms, num of bedrooms. Range 0-10
+
+        12. FinishedBsmntArea, Sqf of finished basemnet. Range 10-6500.
+
+        13. LotArea, Sqf of lot size. Range 0-524,000
+
+        14. AC, whether there is AC or not. Yes or No
+
+        15. Fireplace, whether there is a Fireplace or not. Yes or No
+
+        16. Neighborhood, what neighborhood its in, Factor with 42 options
+
     ```{r}
 
 
