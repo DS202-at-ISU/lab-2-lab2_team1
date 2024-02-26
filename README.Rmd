@@ -93,3 +93,12 @@ Q4:
     ```
 
     As you can see the relationship between Year Built and price is very stable. I separated the data by fire place. The houses that has fireplace tends to have higher sales prices. But there are some outliers even if the house has fireplaces the sale prices is very low, and some houses that does not have fireplaces have higher sale prices.
+
+-   Gavin's section:\
+    I chose to work with the relationship between the LotArea and the price.
+
+```{r}
+ggplot(amesDF, aes(x= log10(LotArea.sf.), y=log10(`Sale.Price`), na.rm=TRUE)) + geom_point()
+```
+
+We see a somewhat linear relationship when both LotArea and SalePrice are scaled with log10. This data would need some more cleaning and preparation to better show this relation. This scatter plot shows a general trend that as the lot area increases so does the sales price. There are many outliers to this trend, however, in general the trend is noticeable and defined.
