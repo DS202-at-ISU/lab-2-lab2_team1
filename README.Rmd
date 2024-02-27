@@ -102,3 +102,14 @@ ggplot(amesDF, aes(x= log10(LotArea.sf.), y=log10(`Sale.Price`), na.rm=TRUE)) + 
 ```
 
 We see a somewhat linear relationship when both LotArea and SalePrice are scaled with log10. This data would need some more cleaning and preparation to better show this relation. This scatter plot shows a general trend that as the lot area increases so does the sales price. There are many outliers to this trend, however, in general the trend is noticeable and defined.
+
+
+- Luis' section: 
+
+    I chose to work with the relationship between totalLivingArea and Sale Price
+```{r}
+str(ames)
+ggplot(ames, aes(x= log10(`TotalLivingArea (sf)`), y=log10(`Sale Price`), na.rm=TRUE)) + geom_point()
+```
+
+We see a linear relationship with Total Living Area and Sale Price after being scaled accordingly. This data could obviously use more cleaning as there are many outliers since there are many 0 values in sale price and even some in total living area. Ignoring those however, we can say that the graph shows a general positive linear trend where most of the data is located. 
